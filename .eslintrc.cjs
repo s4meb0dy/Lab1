@@ -1,17 +1,14 @@
-module.exports = {
+const config = {
   env: {
     node: true,
-    es2021: true
+    es2021: true,
   },
-  extends: [
-  'standard',
-  "plugin:sonarjs/recommended"
-  ],
+  extends: ['standard', 'plugin:sonarjs/recommended'],
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  "plugins": ["sonarjs"]
-  rules: {
-  }
+  plugins: ['sonarjs'],
+  rules: {},
 }
+export default config
