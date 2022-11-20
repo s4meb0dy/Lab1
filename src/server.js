@@ -1,13 +1,14 @@
 import * as http from 'node:http'
 import router from './router.js'
 import defaultHandler from './defaultHandler.js'
+import helpers from './helpers.js'
 
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url || '/', `https://${req.headers.host}`)
   const routeModule = router.get(url.pathname) ?? {}
   const handler = routeModule[req?.method] ?? defaultHandler
 
-  handler(req, res)
+  handler(req, Object.assign(res, helpers), url)
 })
 server.on('clientError', (err, socket) => {
   if (err) console.log(err)
