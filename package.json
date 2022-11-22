@@ -4,6 +4,9 @@
   "description": "lab1",
   "type": "module",
   "main": "index.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "start": "node src/server.js",
     "lint": "eslint --ignore-path .gitignore .",
@@ -23,9 +26,7 @@
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-sonarjs": "^0.16.0",
     "husky": "^8.0.1",
+    "@vercel/node": "^2.6.4",
     "prettier": "2.7.1"
-  },
-  "dependencies": {
-    "@vercel/node": "^2.6.4"
   }
 }
