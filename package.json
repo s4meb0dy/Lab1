@@ -5,26 +5,18 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js",
     "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier --ignore-path .gitignore --check .",
     "format:fix": "prettier --ignore-path .gitignore --write .",
     "prepare": "husky install"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/s4meb0dy/Lab1.git"
-  },
   "keywords": [
     "lab1"
   ],
   "author": "Anton Bodnar",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/s4meb0dy/Lab1/issues"
-  },
-  "homepage": "https://github.com/s4meb0dy/Lab1#readme",
   "devDependencies": {
     "eslint": "^8.25.0",
     "eslint-config-prettier": "^8.5.0",
