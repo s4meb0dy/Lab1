@@ -7,7 +7,7 @@ function OPTIONS(req, res) {
 }
 
 function POST(req, res, url, payload) {
-    res.json({ contentType: req.headers['content-type'], payload })
+  res.json({ contentType: req.headers['content-type'], payload })
 }
 
 export { GET, OPTIONS, POST }
